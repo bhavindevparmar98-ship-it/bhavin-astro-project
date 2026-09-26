@@ -1,0 +1,1550 @@
+---
+import { Image } from 'astro:assets';
+import '../components/styles.astro/global.css';
+import appStoreBadge from '../assets/app-store-apple-logo.svg';
+import googlePlayBadge from '../assets/google-play-badge-logo1.svg';
+import phoneMockup from '../assets/iphone-15-pro-max-hand-mockup.png';
+import teamOne from '../assets/Team Member image-1.png';
+import teamTwo from '../assets/Team Member image-2.png';
+import teamThree from '../assets/Team Member image-3.png';
+import heroVisual from '../assets/ab savio img.png';
+import tapShare from '../assets/tap share.svg';
+import autoOrganized from '../assets/auto organized.svg';
+import searchEverything from '../assets/Search everything.svg';
+import smartResurfacing from '../assets/Smart resurfacing-4.svg';
+import dailyDigest from '../assets/Daily digest-3.svg';
+import musicPlaylist from '../assets/music playlist.svg';
+import backgroundDecor from '../assets/background.svg';
+
+const heroStats = [
+  { value: '120K+', label: 'Active users' },
+  { value: '4.9+', label: 'App Store rating' },
+  { value: '8M+', label: 'Items saved' },
+  { value: '8+', label: 'Platforms supported' },
+];
+
+const features = [
+  {
+    icon: tapShare,
+    title: 'Save in one tap',
+    text: 'From any app, straight to Savio.',
+    accent: 'share',
+  },
+  {
+    icon: autoOrganized,
+    title: 'Organize your world',
+    text: 'Collections that actually feel yours.',
+    accent: 'organize',
+  },
+  {
+    icon: smartResurfacing,
+    title: 'Smart resurfacing',
+    text: 'The right save, at the right moment.',
+    accent: 'reminder',
+  },
+];
+
+const steps = [
+  {
+    step: 'STEP 01',
+    title: 'Save',
+    text: 'Share anything to Savio in a single tap.',
+    icon: 'save',
+  },
+  {
+    step: 'STEP 02',
+    title: 'Organize',
+    text: 'Drop it into a collection or let us suggest one.',
+    icon: 'organize',
+  },
+  {
+    step: 'STEP 03',
+    title: 'Revisit',
+    text: 'Get gentle reminders and your daily digest.',
+    icon: 'remind',
+  },
+];
+
+const testimonials = [
+  {
+    quote: 'Savio replaced 4 apps. My screenshots folder finally has peace.',
+    name: 'Rhea S.',
+    role: 'Product designer',
+  },
+  {
+    quote: 'I save less and remember more. The reminder system feels calm, not noisy.',
+    name: 'Miles D.',
+    role: 'Writer',
+  },
+  {
+    quote: 'The collections are clean, searchable, and actually useful every single day.',
+    name: 'Preeti A.',
+    role: 'Research lead',
+  },
+  {
+    quote: 'It finally feels like a place for my internet life instead of a graveyard of tabs.',
+    name: 'Aarav N.',
+    role: 'Creator',
+  },
+];
+
+const faqs = [
+  {
+    q: 'What is Savio and how is it different from bookmarks?',
+    a: 'Savio is not just a place to dump links. It helps you save content with intention, organize it into collections, and come back to it with smart reminders so nothing important gets lost.',
+    open: true,
+  },
+  {
+    q: 'Does Savio store everything privately?',
+    a: 'Yes. Savio is built to keep your saved content personal and private while still making it easy to revisit and share the things that matter.',
+  },
+  {
+    q: 'Can I save from mobile apps and the web?',
+    a: 'Absolutely. Savio works across popular apps and URLs so you can keep your saves in one place without extra effort.',
+  },
+  {
+    q: 'Is it free to use?',
+    a: 'Yes. Savio is free to download and use, with a calming, no-friction experience at the core of the product.',
+  },
+];
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Savio landing page" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <title>Savio | Landing Page</title>
+  </head>
+  <body>
+    <div class="landing-shell">
+      <header class="hero-header">
+        <div class="hero-frame">
+          <nav class="navbar" aria-label="Main navigation">
+            <a href="/landing" class="brand-mark" aria-label="Savio home">
+              <img src="/savio-logo.svg" alt="Savio logo" />
+            </a>
+
+            <div class="nav-links">
+              <a href="#features">Features</a>
+              <a href="#how-it-works">How it works</a>
+              <a href="#app">App</a>
+              <a href="#testimonials">Testimonials</a>
+            </div>
+
+            <button type="button" class="cta-pill">Signup</button>
+          </nav>
+
+          <div class="hero-content">
+            <div class="hero-copy">
+              <span class="eyebrow">SMART REMINDERS</span>
+              <h1>Smart Reminders. Save what matters.</h1>
+              <p>
+                Savio turns endless scrolling into intentional saving so your best ideas, links,
+                and moments are easy to revisit later.
+              </p>
+
+              <div class="store-row" aria-label="Download app badges">
+                <Image src={appStoreBadge} alt="Download on the App Store" class="badge" width={161} height={48} />
+                <Image src={googlePlayBadge} alt="Get it on Google Play" class="badge" width={161} height={48} />
+              </div>
+            </div>
+
+            <div class="hero-visual" aria-label="Savio app preview">
+              <div class="glow-ring"></div>
+              <div class="floating-box reel-pill">
+                <span class="play-badge">▶</span>
+                <span>Reel</span>
+              </div>
+
+              <div class="floating-box share-card">
+                <div class="share-title">Share with friends</div>
+                <div class="avatar-row">
+                  <span class="avatar a1">A</span>
+                  <span class="avatar a2">P</span>
+                  <span class="avatar a3">J</span>
+                  <span class="avatar a4">R</span>
+                </div>
+                <button type="button" class="share-button">Share now</button>
+              </div>
+
+              <div class="floating-box reminder-card">
+                <div class="thumb-art"></div>
+                <div class="reminder-copy">
+                  <strong>Time to watch!</strong>
+                  <span>30 min ago</span>
+                </div>
+              </div>
+
+              <div class="floating-box upcoming-card">
+                <div class="mini-icon">◔</div>
+                <div>
+                  <strong>Upcoming Reminder</strong>
+                  <span>Today, 6:30 PM</span>
+                </div>
+                <span class="chevron">›</span>
+              </div>
+
+              <Image src={heroVisual} alt="Savio app preview" class="hero-phone" />
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="stats-bar">
+          <div class="stats-strip">
+            {heroStats.map((item) => (
+              <div class="stat-cell" key={item.value}>
+                <strong>{item.value}</strong>
+                <span>{item.label}</span>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section class="features-section" id="features">
+          <div class="section-head center">
+            <span class="eyebrow eyebrow-dark">FEATURES</span>
+            <h2>A calmer way to keep what you love.</h2>
+          </div>
+
+          <div class="feature-stack">
+            <article class="feature-row">
+              <div class="feature-copy">
+                <span class="eyebrow eyebrow-dark">SAVE IN ONE TAP</span>
+                <h3>From any app, straight to Savio.</h3>
+                <p>
+                  Hit share, choose Savio, and keep your best links, clips, and ideas in one place without breaking flow.
+                </p>
+              </div>
+
+              <div class="feature-visual visual-orange">
+                <div class="phone-glass">
+                  <div class="mini-topbar"></div>
+                  <div class="share-sheet">
+                    <span class="sheet-pill"><span class="dot orange"></span> Savio</span>
+                    <span class="sheet-pill"><span class="dot gray"></span> Mail</span>
+                    <span class="sheet-pill"><span class="dot gold"></span> Messages</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="feature-row reverse">
+              <div class="feature-visual visual-soft">
+                <div class="collection-panel">
+                  <div class="collection-item">Bangalore Places</div>
+                  <div class="collection-item">Philosophy</div>
+                  <div class="collection-item">Fitness &amp; Health</div>
+                  <div class="collection-item">Travel Destinations</div>
+                </div>
+              </div>
+
+              <div class="feature-copy">
+                <span class="eyebrow eyebrow-dark">ORGANIZE YOUR WORLD</span>
+                <h3>Collections that actually feel yours.</h3>
+                <p>
+                  Group saves by mood, topic, or intent with automatic organization that keeps things searchable and easy to revisit.
+                </p>
+              </div>
+            </article>
+
+            <article class="feature-row">
+              <div class="feature-copy">
+                <span class="eyebrow eyebrow-dark">SMART REMINDERS</span>
+                <h3>The right save, at the right moment.</h3>
+                <p>
+                  Savio knows when you are ready to watch, read, or revisit and gently brings it back at the ideal time.
+                </p>
+              </div>
+
+              <div class="feature-visual visual-soft">
+                <div class="reminder-panel">
+                  <div class="panel-card large-card">
+                    <div class="panel-icon orange">▶</div>
+                    <div>
+                      <strong>Time to watch!</strong>
+                      <span>Catch up on your saved video</span>
+                    </div>
+                  </div>
+                  <div class="panel-card small-card">
+                    <div class="panel-icon muted">◔</div>
+                    <div>
+                      <strong>Upcoming Reminder</strong>
+                      <span>Today, 6:30 PM</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="how-section" id="how-it-works">
+          <div class="section-head center">
+            <span class="eyebrow">HOW IT WORKS</span>
+            <h2>Three steps. Zero friction.</h2>
+          </div>
+
+          <div class="steps-strip">
+            {steps.map((item) => (
+              <div class="step-card" key={item.step}>
+                <div class="icon-box">
+                  {item.icon === 'save' && <span>⇪</span>}
+                  {item.icon === 'organize' && <span>▣</span>}
+                  {item.icon === 'remind' && <span>◔</span>}
+                </div>
+                <span class="step-label">{item.step}</span>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section class="app-showcase" id="app">
+          <div class="section-head center">
+            <span class="eyebrow eyebrow-dark">THE APP</span>
+            <h2>Designed with the same care you save with.</h2>
+          </div>
+
+          <div class="phone-row">
+            <div class="phone-mockup phone-one">
+              <div class="screen screen-one"></div>
+            </div>
+            <div class="phone-mockup phone-two">
+              <div class="screen screen-two"></div>
+            </div>
+            <div class="phone-mockup phone-three">
+              <div class="screen screen-three"></div>
+            </div>
+            <div class="phone-mockup phone-four">
+              <div class="screen screen-four"></div>
+            </div>
+            <div class="phone-mockup phone-five">
+              <div class="screen screen-five"></div>
+            </div>
+            <div class="phone-mockup phone-six">
+              <div class="screen screen-six"></div>
+            </div>
+            <div class="phone-mockup phone-seven">
+              <div class="screen screen-seven"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="testimonial-section" id="testimonials">
+          <div class="section-head center">
+            <span class="eyebrow">LOVED BY QUIET READERS</span>
+            <h2>Built for people, not for feeds.</h2>
+          </div>
+
+          <div class="marquee-wrap">
+            <div class="marquee marquee-one">
+              {[...testimonials, ...testimonials].map((item, idx) => (
+                <article class="testimonial-card" key={`${item.name}-${idx}`}>
+                  <div class="stars" aria-label="5 star rating">★★★★★</div>
+                  <p>“{item.quote}”</p>
+                  <div class="person-row">
+                    <span class="person-badge">{item.name.slice(0, 2).toUpperCase()}</span>
+                    <div>
+                      <strong>{item.name}</strong>
+                      <span>{item.role}</span>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+            <div class="marquee marquee-two">
+              {[...testimonials, ...testimonials].map((item, idx) => (
+                <article class="testimonial-card" key={`${item.name}-b-${idx}`}>
+                  <div class="stars" aria-label="5 star rating">★★★★★</div>
+                  <p>“{item.quote}”</p>
+                  <div class="person-row">
+                    <span class="person-badge">{item.name.slice(0, 2).toUpperCase()}</span>
+                    <div>
+                      <strong>{item.name}</strong>
+                      <span>{item.role}</span>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section class="faq-section">
+          <div class="faq-layout">
+            <div class="faq-copy">
+              <span class="eyebrow">FAQs</span>
+              <h2>Frequently asked questions</h2>
+            </div>
+
+            <div class="faq-list">
+              {faqs.map((item) => (
+                <div class={`faq-item ${item.open ? 'open' : ''}`}>
+                  <div class="faq-question-row">
+                    <span>{item.q}</span>
+                    <span class="faq-toggle">{item.open ? '−' : '+'}</span>
+                  </div>
+                  {item.open && <p>{item.a}</p>}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section class="cta-section">
+          <div class="cta-card">
+            <div class="cta-copy">
+              <span class="eyebrow">FREE TO DOWNLOAD</span>
+              <h2>Your saved world, one tap away.</h2>
+              <p>Free to download. Built for the people who like to revisit.</p>
+              <div class="store-row compact" aria-label="App downloads">
+                <Image src={appStoreBadge} alt="Download on the App Store" class="badge small-badge" width={134} height={40} />
+                <Image src={googlePlayBadge} alt="Get it on Google Play" class="badge small-badge" width={134} height={40} />
+              </div>
+            </div>
+
+            <Image src={phoneMockup} alt="Savio phone mockup" class="cta-phone" />
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <img src="/savio-logo.svg" alt="Savio logo" />
+          </div>
+
+          <nav class="footer-links" aria-label="Footer navigation">
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How it works</a>
+            <a href="#app">App</a>
+            <a href="#testimonials">Testimonials</a>
+          </nav>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --orange: #ff4800;
+    --orange-soft: rgba(255, 72, 0, 0.12);
+    --text: #231f20;
+    --muted-60: rgba(35, 31, 32, 0.6);
+    --muted-70: rgba(35, 31, 32, 0.7);
+    --muted-80: rgba(35, 31, 32, 0.8);
+    --line: rgba(35, 31, 32, 0.12);
+    --card: rgba(255, 255, 255, 0.8);
+    --surface: #f4f4f4;
+    --soft-bg: rgba(35, 31, 32, 0.05);
+    --white: #fff;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: 'Cabin', sans-serif;
+    background: #ffffff;
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  img { display: block; max-width: 100%; }
+  a { text-decoration: none; }
+  button { font: inherit; }
+
+  .landing-shell {
+    width: 100%;
+    background: #fff;
+  }
+
+  .hero-header {
+    padding: 16px 16px 0;
+  }
+
+  .hero-frame {
+    position: relative;
+    max-width: 1408px;
+    margin: 0 auto;
+    border-radius: 24px;
+    background: linear-gradient(133deg, rgba(255,199,176,0.4) 0%, rgba(255,72,0,0.4) 94.86%);
+    overflow: hidden;
+    min-height: 992px;
+    isolation: isolate;
+  }
+
+  .hero-frame::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(255,255,255,0.14) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.14) 1px, transparent 1px);
+    background-size: 64px 64px;
+    opacity: 0.35;
+    z-index: 0;
+  }
+
+  .hero-frame::after {
+    content: "";
+    position: absolute;
+    width: 755px;
+    height: 474px;
+    background: var(--orange);
+    border-radius: 50%;
+    filter: blur(225px);
+    left: 52%;
+    top: 22%;
+    opacity: 0.17;
+    z-index: 0;
+  }
+
+  .navbar {
+    position: relative;
+    z-index: 2;
+    width: min(1110px, calc(100% - 64px));
+    height: 72px;
+    margin: 24px auto 0;
+    padding: 0 20px 0 18px;
+    background: rgba(255,255,255,0.96);
+    border: 1px solid rgba(35,31,32,0.1);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .brand-mark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 104px;
+  }
+
+  .brand-mark img {
+    width: auto;
+    height: 32px;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex: 1;
+  }
+
+  .nav-links a {
+    padding: 12px 16px;
+    color: var(--muted-80);
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 400;
+  }
+
+  .cta-pill {
+    border: none;
+    background: var(--orange);
+    color: var(--white);
+    border-radius: 12px;
+    width: 112px;
+    height: 43px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1110px;
+    margin: 0 auto;
+    padding: 72px 0 72px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  .hero-copy {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .eyebrow {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 700;
+    color: var(--orange);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 18px;
+  }
+
+  .eyebrow-dark { color: var(--orange); }
+
+  h1, h2, h3, p { margin: 0; }
+
+  .hero-copy h1 {
+    font-size: clamp(2.7rem, 4vw, 4rem);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  .hero-copy p {
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 1.2;
+    color: var(--muted-60);
+  }
+
+  .store-row {
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .badge {
+    width: 161.34px;
+    height: 48px;
+    object-fit: cover;
+  }
+
+  .badge.small-badge {
+    width: 134.45px;
+    height: 40px;
+  }
+
+  .hero-visual {
+    position: relative;
+    height: 620px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-top: 12px;
+  }
+
+  .glow-ring {
+    position: absolute;
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.18) 32%, rgba(255,72,0,0.04) 68%, rgba(255,72,0,0) 100%);
+    filter: blur(10px);
+    z-index: 0;
+  }
+
+  .hero-phone {
+    position: relative;
+    z-index: 2;
+    width: min(100%, 520px);
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 18px 24px rgba(35,31,32,0.18));
+  }
+
+  .floating-box {
+    position: absolute;
+    z-index: 3;
+    background: rgba(255,255,255,0.94);
+    border: 1px solid rgba(35,31,32,0.08);
+    box-shadow: 0 10px 24px rgba(35,31,32,0.08);
+  }
+
+  .reel-pill {
+    top: 70px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 18px;
+    border-radius: 999px;
+    transform: rotate(-12deg);
+    font-size: 19.3px;
+    font-weight: 500;
+  }
+
+  .play-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    font-size: 12px;
+    color: var(--orange);
+  }
+
+  .share-card {
+    right: 18px;
+    top: 170px;
+    width: 190px;
+    padding: 12px 12px 10px;
+    border-radius: 12px;
+  }
+
+  .share-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 10px;
+  }
+
+  .avatar-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    padding: 6px 8px;
+    border-radius: 10px;
+    background: rgba(242,243,245,0.9);
+  }
+
+  .avatar {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8px;
+    font-weight: 700;
+    color: #fff;
+  }
+  .a1 { background: linear-gradient(135deg, #ffb086, #ff4800); }
+  .a2 { background: linear-gradient(135deg, #ffd55c, #f6ab00); }
+  .a3 { background: linear-gradient(135deg, #79b7ff, #2d6efb); }
+  .a4 { background: linear-gradient(135deg, #c7c7c7, #8d8d8d); }
+
+  .share-button {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    background: var(--orange);
+    color: #fff;
+    font-weight: 700;
+    padding: 8px 10px;
+    cursor: pointer;
+  }
+
+  .reminder-card {
+    left: 30px;
+    bottom: 120px;
+    width: 170px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .thumb-art {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #f4b58d, #ff4800 55%, #a62fe0 100%);
+    flex-shrink: 0;
+  }
+
+  .reminder-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .reminder-copy strong { font-size: 11px; }
+  .reminder-copy span { font-size: 10px; color: var(--muted-60); }
+
+  .upcoming-card {
+    right: 60px;
+    bottom: 22px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 230px;
+    padding: 12px 14px;
+    border-radius: 16px;
+  }
+
+  .mini-icon {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: rgba(255,72,0,0.12);
+    color: var(--orange);
+    font-size: 14px;
+  }
+
+  .upcoming-card div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+  }
+
+  .upcoming-card strong {
+    font-size: 12px;
+  }
+
+  .upcoming-card span {
+    font-size: 10px;
+    color: var(--muted-60);
+  }
+
+  .chevron {
+    font-size: 20px;
+    color: var(--muted-80);
+  }
+
+  .stats-bar {
+    padding: 40px 24px 0;
+  }
+
+  .stats-strip {
+    max-width: 1084px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    border: 1px solid rgba(35,31,32,0.2);
+    border-radius: 24px;
+    background: #fff;
+    overflow: hidden;
+  }
+
+  .stat-cell {
+    min-height: 143px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 32px 18px;
+    border-right: 1px dashed rgba(35,31,32,0.2);
+    text-align: center;
+  }
+
+  .stat-cell:last-child { border-right: none; }
+
+  .stat-cell strong {
+    font-size: 36px;
+    line-height: 1.2;
+    color: var(--orange);
+    font-weight: 600;
+  }
+
+  .stat-cell span {
+    font-size: 16px;
+    color: var(--muted-60);
+  }
+
+  .features-section,
+  .how-section,
+  .app-showcase,
+  .testimonial-section,
+  .faq-section,
+  .cta-section {
+    padding: 80px 24px;
+  }
+
+  .section-head {
+    max-width: 820px;
+    margin: 0 auto 48px;
+    text-align: center;
+  }
+
+  .section-head h2 {
+    font-size: clamp(2.4rem, 3vw, 3rem);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  .feature-stack {
+    max-width: 1110px;
+    margin: 0 auto;
+    display: grid;
+    gap: 52px;
+  }
+
+  .feature-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 52px;
+    align-items: center;
+  }
+
+  .feature-row.reverse { direction: rtl; }
+  .feature-row.reverse > * { direction: ltr; }
+
+  .feature-copy {
+    max-width: 437px;
+  }
+
+  .feature-copy h3 {
+    font-size: clamp(2rem, 2.5vw, 2.5rem);
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 18px;
+  }
+
+  .feature-copy p {
+    color: var(--muted-70);
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .feature-visual {
+    min-height: 512px;
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(35,31,32,0.08);
+  }
+
+  .visual-orange {
+    background: rgba(255,72,0,0.08);
+  }
+
+  .visual-soft {
+    background: rgba(255,255,255,0.6);
+  }
+
+  .phone-glass {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    min-height: 420px;
+    background: rgba(255,255,255,0.9);
+    border: 1px solid rgba(35,31,32,0.08);
+    border-radius: 26px;
+    box-shadow: 0 18px 40px rgba(35,31,32,0.12);
+    padding: 18px 18px 0;
+  }
+
+  .mini-topbar {
+    width: 110px;
+    height: 12px;
+    border-radius: 999px;
+    background: rgba(35,31,32,0.08);
+    margin: 0 auto 18px;
+  }
+
+  .share-sheet {
+    display: grid;
+    gap: 10px;
+    margin-top: 32px;
+  }
+
+  .sheet-pill {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 14px;
+    background: #f3f3f3;
+    border-radius: 12px;
+    font-size: 15px;
+    color: var(--muted-80);
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .dot.orange { background: linear-gradient(135deg, #ffb086, #ff4800); }
+  .dot.gray { background: linear-gradient(135deg, #d6d6d6, #8f8f8f); }
+  .dot.gold { background: linear-gradient(135deg, #ffd95d, #f4b400); }
+
+  .collection-panel {
+    position: absolute;
+    inset: 30px 44px 30px 44px;
+    display: grid;
+    gap: 12px;
+  }
+
+  .collection-item {
+    background: rgba(255,255,255,0.88);
+    border: 1px solid rgba(35,31,32,0.08);
+    border-radius: 14px;
+    padding: 14px 16px;
+    font-size: 16px;
+    color: var(--muted-80);
+    box-shadow: 0 8px 18px rgba(35,31,32,0.06);
+  }
+
+  .reminder-panel {
+    position: absolute;
+    inset: 36px 36px 36px 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 18px;
+  }
+
+  .panel-card {
+    background: rgba(255,255,255,0.9);
+    border: 1px solid rgba(35,31,32,0.08);
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 18px;
+    box-shadow: 0 10px 28px rgba(35,31,32,0.06);
+  }
+
+  .panel-card.large-card {
+    min-height: 116px;
+  }
+
+  .panel-card.small-card {
+    min-height: 92px;
+  }
+
+  .panel-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+    flex-shrink: 0;
+  }
+
+  .panel-icon.orange { background: linear-gradient(135deg, #ffb086, #ff4800); }
+  .panel-icon.muted { background: rgba(255,72,0,0.08); color: var(--orange); }
+
+  .panel-card strong {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 18px;
+  }
+
+  .panel-card span {
+    display: block;
+    font-size: 12px;
+    color: var(--muted-60);
+  }
+
+  .how-section {
+    background: rgba(35,31,32,0.05);
+  }
+
+  .steps-strip {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border: 1px solid rgba(35,31,32,0.2);
+    border-radius: 24px;
+    overflow: hidden;
+    background: #fff;
+  }
+
+  .step-card {
+    min-height: 270px;
+    padding: 40px 32px;
+    border-right: 1px solid rgba(35,31,32,0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .step-card:last-child { border-right: none; }
+
+  .icon-box {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background: rgba(255,72,0,0.15);
+    color: var(--orange);
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+
+  .step-label {
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--orange);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 14px;
+  }
+
+  .step-card h3 {
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  .step-card p {
+    font-size: 16px;
+    color: var(--muted-70);
+    line-height: 1.5;
+  }
+
+  .app-showcase {
+    background: var(--surface);
+    overflow: hidden;
+  }
+
+  .phone-row {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    align-items: end;
+    gap: 18px;
+    overflow-x: auto;
+    padding-bottom: 12px;
+  }
+
+  .phone-mockup {
+    width: 220px;
+    height: 430px;
+    background: linear-gradient(180deg, #0e0e12 0%, #1f2025 100%);
+    border: 2px solid #1d1d1d;
+    border-radius: 34px;
+    position: relative;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.18);
+    flex-shrink: 0;
+  }
+
+  .phone-mockup::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 112px;
+    height: 18px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.08);
+  }
+
+  .screen {
+    position: absolute;
+    inset: 30px 10px 10px 10px;
+    border-radius: 24px;
+    overflow: hidden;
+    background: linear-gradient(160deg, #f9f5f1, #ece7e3);
+  }
+
+  .screen-one { background: linear-gradient(180deg, #f6f0e8, #f3f1ed); }
+  .screen-two { background: linear-gradient(180deg, #f8f2eb, #fff); }
+  .screen-three { background: linear-gradient(180deg, #f6f7f9, #eceef6); }
+  .screen-four { background: linear-gradient(180deg, #fff, #f5f5f7); }
+  .screen-five { background: linear-gradient(180deg, #f3f0ef, #ede5df); }
+  .screen-six { background: linear-gradient(180deg, #f8f7f6, #f0f0f1); }
+  .screen-seven { background: linear-gradient(180deg, #f1f0ef, #e9e6e6); }
+
+  .testimonial-section {
+    background: rgba(35,31,32,0.05);
+  }
+
+  .marquee-wrap {
+    max-width: 1500px;
+    margin: 0 auto;
+    overflow: hidden;
+    display: grid;
+    gap: 18px;
+  }
+
+  .marquee {
+    display: flex;
+    width: max-content;
+    gap: 18px;
+    animation: marquee 28s linear infinite;
+  }
+
+  .marquee-two {
+    animation-direction: reverse;
+    animation-duration: 30s;
+  }
+
+  .testimonial-card {
+    width: 411px;
+    min-height: 245px;
+    background: rgba(255,255,255,0.9);
+    border: 1px solid rgba(35, 31, 32, 0.2);
+    border-radius: 24px;
+    padding: 28px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-shrink: 0;
+  }
+
+  .stars {
+    color: var(--orange);
+    letter-spacing: 2px;
+    font-size: 18px;
+  }
+
+  .testimonial-card p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #17122a;
+  }
+
+  .person-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .person-badge {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,72,0,0.1);
+    color: var(--orange);
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .person-row div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .person-row strong {
+    font-size: 16px;
+    color: #17122a;
+  }
+
+  .person-row span {
+    font-size: 14px;
+    color: #585069;
+  }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  .faq-section {
+    background: rgba(35,31,32,0.05);
+  }
+
+  .faq-layout {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.8fr 1.4fr;
+    gap: 48px;
+    align-items: start;
+  }
+
+  .faq-copy h2 {
+    font-size: clamp(2.3rem, 2.6vw, 3rem);
+    line-height: 1.2;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .faq-list {
+    display: grid;
+    gap: 16px;
+  }
+
+  .faq-item {
+    background: rgba(255,255,255,0.9);
+    border: 1px solid rgba(35,31,32,0.1);
+    border-radius: 16px;
+    padding: 22px 24px;
+  }
+
+  .faq-question-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .faq-toggle {
+    font-size: 28px;
+    line-height: 1;
+    color: rgba(35,31,32,0.8);
+  }
+
+  .faq-item p {
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--muted-60);
+  }
+
+  .cta-section {
+    background: var(--surface);
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+
+  .cta-card {
+    position: relative;
+    max-width: 1062px;
+    min-height: 401px;
+    margin: 0 auto;
+    padding: 80px 100px;
+    border-radius: 24px;
+    background: linear-gradient(132.6deg, rgba(255,199,176,0.6) 0%, rgba(255,72,0,0.6) 100%), var(--white);
+    overflow: hidden;
+  }
+
+  .cta-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px);
+    background-size: 64px 64px;
+    opacity: 0.35;
+  }
+
+  .cta-card::after {
+    content: "";
+    position: absolute;
+    width: 563px;
+    height: 448px;
+    border-radius: 50%;
+    left: 54%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255,255,255,0.65);
+    filter: blur(150px);
+  }
+
+  .cta-copy {
+    position: relative;
+    z-index: 1;
+    max-width: 520px;
+  }
+
+  .cta-copy h2 {
+    font-size: clamp(2.3rem, 3vw, 3rem);
+    line-height: 1.2;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 16px;
+  }
+
+  .cta-copy p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: rgba(35,31,32,0.8);
+  }
+
+  .compact {
+    justify-content: flex-start;
+    margin-top: 24px;
+  }
+
+  .cta-phone {
+    position: absolute;
+    right: -18px;
+    bottom: -26px;
+    width: 560px;
+    z-index: 2;
+    filter: drop-shadow(0 22px 32px rgba(35,31,32,0.14));
+  }
+
+  .site-footer {
+    background: rgba(35,31,32,0.05);
+    border-top: 1px solid rgba(35,31,32,0.1);
+  }
+
+  .footer-inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 22px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  .footer-brand img {
+    width: 101.75px;
+    height: 32px;
+  }
+
+  .footer-links {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .footer-links a {
+    color: rgba(35,31,32,0.8);
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  @media (max-width: 980px) {
+    .hero-content,
+    .feature-row,
+    .faq-layout {
+      grid-template-columns: 1fr;
+    }
+
+    .feature-copy {
+      max-width: 100%;
+    }
+
+    .stats-strip {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .steps-strip {
+      grid-template-columns: 1fr;
+    }
+
+    .step-card {
+      border-right: none;
+      border-bottom: 1px solid rgba(35,31,32,0.2);
+    }
+
+    .step-card:last-child { border-bottom: none; }
+
+    .cta-card {
+      padding: 60px 24px 220px;
+    }
+
+    .cta-phone {
+      width: 360px;
+      right: -20px;
+      bottom: -30px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .navbar {
+      width: calc(100% - 24px);
+      padding: 0 14px;
+      height: 64px;
+    }
+
+    .nav-links {
+      display: none;
+    }
+
+    .cta-pill {
+      width: 90px;
+      height: 38px;
+      font-size: 14px;
+    }
+
+    .hero-frame {
+      min-height: 760px;
+    }
+
+    .hero-content {
+      padding-top: 40px;
+    }
+
+    .hero-copy p {
+      font-size: 18px;
+    }
+
+    .hero-visual {
+      height: 420px;
+    }
+
+    .glow-ring {
+      width: 340px;
+      height: 340px;
+    }
+
+    .hero-phone {
+      width: min(100%, 360px);
+    }
+
+    .reel-pill { left: 10px; top: 30px; }
+    .share-card { right: 8px; top: 120px; width: 150px; }
+    .reminder-card { left: 10px; bottom: 80px; }
+    .upcoming-card { right: 10px; bottom: 12px; width: 170px; }
+
+    .stats-strip {
+      grid-template-columns: 1fr;
+    }
+
+    .stat-cell {
+      border-right: none;
+      border-bottom: 1px dashed rgba(35,31,32,0.2);
+    }
+
+    .stat-cell:last-child { border-bottom: none; }
+
+    .feature-row {
+      gap: 24px;
+    }
+
+    .feature-visual {
+      min-height: 360px;
+    }
+
+    .phone-glass {
+      width: 240px;
+      min-height: 300px;
+    }
+
+    .faq-layout {
+      gap: 24px;
+    }
+
+    .faq-question-row {
+      font-size: 17px;
+    }
+
+    .hero-copy h1 {
+      font-size: 2.4rem;
+    }
+
+    .section-head h2 {
+      font-size: 2.2rem;
+    }
+
+    .footer-inner {
+      padding: 22px 16px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>
